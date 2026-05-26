@@ -11,7 +11,8 @@ namespace Banco
     {
         public int NumeroCuenta { get; set; }
         public string Titular { get; protected set; }
-        //saldo de la cuenta
+
+        //saldo de la cuenta clase protegida 
         protected double saldo;
 
         //constructor para inicializar el saldo
@@ -37,7 +38,7 @@ namespace Banco
                 saldo += monto;
                 Console.WriteLine("deposito realizado. Saldo " + saldo);
             }
-            catch (ArgumentException e)
+            catch (ArgumentException e) // "e" para darle nombre a la excepcion y saber que error es cuando salte
             {
                 Console.WriteLine("error: " + e.Message);
             }
